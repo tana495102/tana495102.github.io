@@ -55,7 +55,7 @@ $( document ).ready(function() {
             total_load_activePower  = data.val().load_activePower;
         } else if (data.key == 'member_profit') {
             update_data(data.key,parseInt(data.val()));
-            writeUserData('tana','tanap','tana_pai@hotmail.com','https://upload.wikimedia.org/wikipedia/de/d/da/Manchester_United_FC.svg')
+            writeUserData('tana','tanap','tana_pai@hotmail.com','https://upload.wikimedia.org/wikipedia/de/d/da/Manchester_United_FC.svg');
         } else if (data.key == 'member_order') {
             update_data(data.key,parseInt(data.val()));
         } else if (data.key == 'member_issuereports') {
