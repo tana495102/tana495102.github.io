@@ -23,11 +23,11 @@ function writeUserData(userId, name, email, imageUrl) {
 $( document ).ready(function() {
     console.log("starting document!!!!");
 
-    $(function ($)) {
-      $("#firebasebutton").click(function (evt)) {
+    $(function ($) {
+      $("#firebasebutton").click(function (evt) {
         console.log("firebasebutton was clicked")
-      }
-    }
+      })
+    });
 
     // Initialize Firebase
     console.log("Initialize Firebase");
