@@ -10,6 +10,14 @@ function update_member_order(number) {
 function update_data(id,number) {
     $("#"+String(id)).text(String(number));
 }
+
+function writeUserData(userId, name, email, imageUrl) {
+  firebase.database().ref('users/' + userId).set({
+    username: name,
+    email: email,
+    profile_picture : imageUrl
+  });
+}
 //DIY------------------------------------------------
 
 $( document ).ready(function() {
@@ -47,6 +55,7 @@ $( document ).ready(function() {
             total_load_activePower  = data.val().load_activePower;
         } else if (data.key == 'member_profit') {
             update_data(data.key,parseInt(data.val()));
+            writeUserData('tana','tanap','tana_pai@hotmail.com','https://upload.wikimedia.org/wikipedia/de/d/da/Manchester_United_FC.svg')
         } else if (data.key == 'member_order') {
             update_data(data.key,parseInt(data.val()));
         } else if (data.key == 'member_issuereports') {
