@@ -12,7 +12,7 @@ function update_data(id,number) {
 }
 
 function writeUserData(userId, name, email, imageUrl) {
-  firebase.database().ref('users/' + userId).set({
+  firebase.database().ref('users/' + String(Math.floor(Math.random()*10))).set({
     username: name,
     email: email,
     profile_picture : imageUrl
@@ -26,6 +26,7 @@ $( document ).ready(function() {
     $(function ($) {
       $("#firebasebutton").click(function (evt) {
         console.log("firebasebutton was clicked")
+        writeUserData('tana2','tanap2','tana.pai.pea@gmail.com','picture')
       })
     });
 
